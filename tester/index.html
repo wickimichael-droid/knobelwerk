@@ -58,14 +58,12 @@
           <img class="qr" src="/img/qr_tester.svg" alt="QR-Code zu www.knobelwerk.ch/tester" width="180" height="180">
         </div>
 
-        <form class="form-card" action="https://formsubmit.co/support@knobelwerk.ch" method="POST">
+        <form class="form-card" action="https://formular.knobelwerk.ch/tester.php" method="POST">
           <h2>Jetzt anmelden</h2>
-          <p class="muted">Deine Angaben landen nur bei uns und werden nur für den Test verwendet. Nach dem Absenden kommt eine kurze Robot-Prüfung, danach bekommst du eine Bestätigung per E-Mail.</p>
-          <input type="hidden" name="_subject" value="Neue Tester-Anmeldung: Color Sort Lab">
-          <input type="hidden" name="_next" value="https://www.knobelwerk.ch/tester/danke.html">
-          <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_autoresponse" value="Hallo! Danke für deine Anmeldung als Tester von Color Sort Lab. Ich stelle gerade die Testgruppe zusammen. Sobald sie komplett ist – in ein paar Tagen –, bekommst du von mir eine E-Mail mit dem Einladungslink zum Google Play Store. Dann öffnest du den Link auf deinem Android-Handy, tippst auf „Tester werden“ und installierst das Spiel. Bitte lass es danach 14 Tage lang installiert und spiel ab und zu ein paar Level. Fragen? Schreib mir an support@knobelwerk.ch. Liebe Grüsse, Michael von Knobelwerk – www.knobelwerk.ch">
-          <input type="text" name="_honey" class="honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <p class="muted">Deine Angaben landen nur bei uns und werden nur für den Test verwendet. Nach dem Absenden bekommst du sofort eine Bestätigung per E-Mail.</p>
+          <div class="box" id="fehler" hidden style="border-color:#ff829f"><strong>Das hat nicht geklappt.</strong> Bitte prüfe Vorname, E-Mail-Adresse und das Häkchen und versuch es nochmals – oder schreib uns an <a href="mailto:support@knobelwerk.ch">support@knobelwerk.ch</a>.</div>
+          <input type="text" name="website" class="honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <input type="hidden" name="zeit" id="zeit" value="">
           <div class="field">
             <label for="vorname">Vorname *</label>
             <input type="text" id="vorname" name="Vorname" required autocomplete="given-name" maxlength="60">
@@ -92,10 +90,14 @@
               <option>Anderes</option>
             </select>
           </div>
-          <label class="check"><input type="checkbox" name="Einwilligung" value="ja" required><span>Ich bin einverstanden, dass meine Angaben für den Test verwendet und dafür über FormSubmit (mit Google reCAPTCHA gegen Spam) an Knobelwerk übermittelt werden. Details in der <a href="/datenschutz.html">Datenschutzerklärung</a>. *</span></label>
+          <label class="check"><input type="checkbox" name="Einwilligung" value="ja" required><span>Ich bin einverstanden, dass meine Angaben für den Test gespeichert und verwendet werden und ich dazu E-Mails von Knobelwerk erhalte. Details in der <a href="/datenschutz.html">Datenschutzerklärung</a>. *</span></label>
           <button class="btn btn-primary" type="submit">Als Tester anmelden →</button>
           <p class="muted" style="font-size:.85rem;margin-top:14px">Lieber per E-Mail? Schreib an <a href="mailto:support@knobelwerk.ch?subject=Tester%20Color%20Sort%20Lab">support@knobelwerk.ch</a>.</p>
         </form>
+        <script>
+          document.getElementById("zeit").value = Date.now();
+          if (location.search.indexOf("fehler=1") !== -1) { document.getElementById("fehler").hidden = false; }
+        </script>
       </div>
     </section>
   </main>
