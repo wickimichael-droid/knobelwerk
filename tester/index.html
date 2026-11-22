@@ -58,12 +58,14 @@
           <img class="qr" src="/img/qr_tester.svg" alt="QR-Code zu www.knobelwerk.ch/tester" width="180" height="180">
         </div>
 
-        <form class="form-card" action="https://formular.knobelwerk.ch/tester.php" method="POST">
+        <form class="form-card" action="https://formsubmit.co/support@knobelwerk.ch" method="POST">
           <h2>Jetzt anmelden</h2>
-          <p class="muted">Deine Angaben landen nur bei uns und werden nur für den Test verwendet. Nach dem Absenden bekommst du sofort eine Bestätigung per E-Mail.</p>
-          <div class="box" id="fehler" hidden style="border-color:#ff829f"><strong>Das hat nicht geklappt.</strong> Bitte prüfe Vorname, E-Mail-Adresse und das Häkchen und versuch es nochmals – oder schreib uns an <a href="mailto:support@knobelwerk.ch">support@knobelwerk.ch</a>.</div>
-          <input type="text" name="website" class="honey" tabindex="-1" autocomplete="off" aria-hidden="true">
-          <input type="hidden" name="zeit" id="zeit" value="">
+          <p class="muted">Deine Angaben landen nur bei uns und werden nur für den Test verwendet. Nach dem Absenden bekommst du eine Bestätigung per E-Mail – schau zur Sicherheit auch im Spam-Ordner nach.</p>
+          <input type="hidden" name="_subject" value="Neue Tester-Anmeldung Color Sort Lab">
+          <input type="hidden" name="_next" value="https://www.knobelwerk.ch/tester/danke.html">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_autoresponse" value="Hallo und danke für deine Anmeldung als Tester von Color Sort Lab! Deine Anmeldung ist angekommen. Sobald die Testgruppe zusammengestellt ist – in ein paar Tagen –, schicke ich dir den Einladungslink zum Google Play Store. So geht es dann weiter: 1. Link auf dem Android-Handy öffnen. 2. „Tester werden“ tippen und Color Sort Lab installieren. 3. Das Spiel 14 Tage installiert lassen und ab und zu ein paar Level spielen. Wichtig: Der Link funktioniert nur mit dem Google-Konto, dessen Adresse du angegeben hast. Fragen? Antworte einfach an support@knobelwerk.ch. Liebe Grüsse, Michael von Knobelwerk – www.knobelwerk.ch">
+          <input type="text" name="_honey" class="honey" tabindex="-1" autocomplete="off" aria-hidden="true">
           <div class="field">
             <label for="vorname">Vorname *</label>
             <input type="text" id="vorname" name="Vorname" required autocomplete="given-name" maxlength="60">
@@ -94,10 +96,6 @@
           <button class="btn btn-primary" type="submit">Als Tester anmelden →</button>
           <p class="muted" style="font-size:.85rem;margin-top:14px">Lieber per E-Mail? Schreib an <a href="mailto:support@knobelwerk.ch?subject=Tester%20Color%20Sort%20Lab">support@knobelwerk.ch</a>.</p>
         </form>
-        <script>
-          document.getElementById("zeit").value = Date.now();
-          if (location.search.indexOf("fehler=1") !== -1) { document.getElementById("fehler").hidden = false; }
-        </script>
       </div>
     </section>
   </main>
@@ -113,5 +111,6 @@
       </nav>
     </div>
   </footer>
+  <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "4642e7c9e9e7427aa31e2b17c8c2f21d"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>
