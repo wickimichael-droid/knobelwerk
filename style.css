@@ -188,3 +188,7 @@ th { color: var(--muted); font-weight: 500; }
   .hero-compact { padding: 36px 0 28px; }
   .hero-compact .hero-art { display: none; }
 }
+
+/* Grosser Screenshot im Kopfbereich einer App-Seite */
+.phone-shot { width: 280px; height: auto; aspect-ratio: 9 / 16; border-radius: 30px; border: 6px solid #232c5c; box-shadow: 0 30px 70px rgba(0,0,0,.5); }
+@media (max-width: 860px) { .phone-shot { width: 220px; } }
