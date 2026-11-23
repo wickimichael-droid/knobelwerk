@@ -155,7 +155,7 @@ th { color: var(--muted); font-weight: 500; }
 .logo-card img { width: 100%; height: auto; }
 
 /* Spiele-Übersicht (wächst mit jeder neuen App) */
-.game-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 22px; }
+.game-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px; }
 .game-card { display: flex; flex-direction: column; background: var(--panel); border: 1px solid var(--line); border-radius: 22px; padding: 26px; position: relative; overflow: hidden; }
 .game-card::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 4px; background: var(--brand-gradient); }
 .game-card .icon { width: 92px; height: 92px; border-radius: 22px; box-shadow: 0 12px 30px rgba(0,0,0,.4); margin-bottom: 18px; }
@@ -192,3 +192,8 @@ th { color: var(--muted); font-weight: 500; }
 /* Grosser Screenshot im Kopfbereich einer App-Seite */
 .phone-shot { width: 280px; height: auto; aspect-ratio: 9 / 16; border-radius: 30px; border: 6px solid #232c5c; box-shadow: 0 30px 70px rgba(0,0,0,.5); }
 @media (max-width: 860px) { .phone-shot { width: 220px; } }
+
+/* Spiele in Entwicklung */
+.tag-dev { background: rgba(166, 91, 255, .18); color: #cfa9ff; }
+.game-card.dev .btn-primary { background: transparent; color: var(--text); border: 1px solid var(--line); }
+.game-card.dev .btn-primary:hover { border-color: var(--violet); color: #fff; }
